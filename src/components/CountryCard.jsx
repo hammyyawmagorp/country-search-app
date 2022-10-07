@@ -6,7 +6,11 @@ const CountryCard = (props) => {
 
   return (
     <div className="country-card">
-      <h3>{countryData?.name?.common}</h3>
+      <h1>
+        {countryData?.name?.common} {countryData?.flag}
+      </h1>
+      <h2>{countryData?.capital}</h2>
+      <h2>{countryData?.demonyms?.eng?.f} </h2>
     </div>
   );
 };

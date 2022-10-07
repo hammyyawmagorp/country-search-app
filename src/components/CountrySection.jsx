@@ -6,7 +6,7 @@ const url = "https://restcountries.com/v3.1/name/";
 
 const CountrySection = (props) => {
   const [search, setSearch] = useState("");
-  const [countryData, setCountryData] = useState(null);
+  const [countryData, setCountryData] = useState();
 
   const getCountry = () => {
     axios
@@ -31,6 +31,8 @@ const CountrySection = (props) => {
       />
       <br></br>
       <button onClick={getCountry}>Submit</button>
+      <br></br>
+      <br></br>
       <CountryCard countryData={countryData} />
     </div>
   );
